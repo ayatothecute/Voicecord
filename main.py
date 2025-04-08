@@ -7,14 +7,13 @@ import websocket
 from keep_alive import keep_alive
 
 status = "online" #online/dnd/idle
+GUILD_ID = os.getenv("GUILD_ID")
+CHANNEL_ID = os.getenv("CHANNEL_ID")
+SELF_MUTE = os.getenv("SELF_MUTE")
+SELF_DEAF = os.getenv("SELF_DEAF")
 
-
-SELF_MUTE = True
-SELF_DEAF = True
 
 usertoken = os.getenv("TOKEN")
-guild_id = os.getenv("GUILD_ID")
-channel_id = os.getenv("CHANNEL_ID")
 if not usertoken:
   print("[ERROR] Please add a token inside Secrets.")
   sys.exit()
